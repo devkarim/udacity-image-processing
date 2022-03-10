@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../app';
 
-describe('Test app endpoints', () => {
+describe('Test images endpoint', () => {
   it('gets /images endpoint with valid params', async () => {
     const res = await request(app).get('/api/images').query({
       filename: 'icelandwaterfall',

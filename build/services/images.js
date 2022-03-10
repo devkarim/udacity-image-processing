@@ -44,24 +44,17 @@ var sharp_1 = __importDefault(require("sharp"));
 var fs_1 = require("fs");
 var path_1 = __importDefault(require("path"));
 var resizeSaveImage = function (imagePath, width, height, saveTo, format) { return __awaiter(void 0, void 0, void 0, function () {
-    var imageDir, saveToDir;
+    var saveToDir;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                imageDir = path_1.default.dirname(imagePath);
                 saveToDir = path_1.default.dirname(saveTo);
-                if (!!(0, fs_1.existsSync)(imageDir)) return [3 /*break*/, 2];
-                return [4 /*yield*/, fs_1.promises.mkdir(imageDir)];
+                if (!!(0, fs_1.existsSync)(saveToDir)) return [3 /*break*/, 2];
+                return [4 /*yield*/, fs_1.promises.mkdir(saveToDir)];
             case 1:
                 _a.sent();
                 _a.label = 2;
-            case 2:
-                if (!!(0, fs_1.existsSync)(saveToDir)) return [3 /*break*/, 4];
-                return [4 /*yield*/, fs_1.promises.mkdir(saveToDir)];
-            case 3:
-                _a.sent();
-                _a.label = 4;
-            case 4: return [2 /*return*/, (0, sharp_1.default)(imagePath)
+            case 2: return [2 /*return*/, (0, sharp_1.default)(imagePath)
                     .resize(width, height)
                     .toFormat(format || 'jpg')
                     .toFile(saveTo)];

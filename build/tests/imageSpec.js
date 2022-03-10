@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var images_1 = require("../services/images");
 var path_1 = __importDefault(require("path"));
-describe('Test image resize', function () {
+describe('Test image utils', function () {
     it('should resize image and save', function () { return __awaiter(void 0, void 0, void 0, function () {
         var imagePath, thumbPath, promise;
         return __generator(this, function (_a) {

@@ -9,5 +9,5 @@ type ResizeImageQuery = {
   filename: string;
   width: string;
   height: string;
-  format?: 'png' | 'jpg' | 'jpeg';
+  format?: ImageFormat;
 };

@@ -10,7 +10,7 @@ app.use(cors());
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/api', apiRouter);
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Backend says hi');
 });
 

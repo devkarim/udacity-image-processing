@@ -12,7 +12,7 @@ var app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use('/assets', express_1.default.static(path_1.default.join(__dirname, 'assets')));
 app.use('/api', api_1.default);
-app.use('/', function (req, res) {
+app.get('/', function (req, res) {
     res.send('Backend says hi');
 });
 app.listen(constants_1.PORT, function () {

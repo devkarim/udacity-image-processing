@@ -9,12 +9,7 @@ export const resizeSaveImage = async (
   saveTo: string,
   format?: keyof sharp.FormatEnum
 ) => {
-  const imageDir = path.dirname(imagePath);
   const saveToDir = path.dirname(saveTo);
-
-  if (!existsSync(imageDir)) {
-    await fs.mkdir(imageDir);
-  }
 
   if (!existsSync(saveToDir)) {
     await fs.mkdir(saveToDir);

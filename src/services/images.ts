@@ -8,7 +8,7 @@ export const resizeSaveImage = async (
   height: number,
   saveTo: string,
   format?: keyof sharp.FormatEnum
-) => {
+): Promise<sharp.OutputInfo> => {
   const saveToDir = path.dirname(saveTo);
 
   if (!existsSync(saveToDir)) {
